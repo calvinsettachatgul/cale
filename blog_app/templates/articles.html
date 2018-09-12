@@ -1,0 +1,24 @@
+<!doctype html>
+<html>
+    <head>
+        <title>blogs website</title>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    </head>
+    <body>
+        <div id="articles">
+            {% if articles: %}
+                {{articles}}
+            <ul>
+                {% for article in articles: %}
+                   <li>{{article}}</li> 
+                {% endfor %}
+            </ul>    
+        </div>
+        {% else: %}
+            {{ article }}
+        {% endif %}
+        <script type="text/javascript" src="{{ url_for('static', filename='index.js') }}"></script>
+    </body>
+
+    
+</html>
