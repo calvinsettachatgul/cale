@@ -13,9 +13,7 @@ def root():
 # crud operations
 # create read update destroy
 
-
 articles = ['article1', 'article2','article3','article4']
-
     
 @app.route('/articles', methods=['GET', 'POST'])
 def all_articles():
