@@ -1,6 +1,6 @@
 # Planning Algorithms
 
-## Codewars
-
-## Hackerrank
+# exercise websites
+* Codewars
+* Hackerrank
 

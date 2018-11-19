@@ -3,7 +3,7 @@
 Calvin
 
 * React
-* Python
+* Python web framework
 * Algorithms
 * Testing
 
