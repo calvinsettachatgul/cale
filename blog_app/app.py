@@ -1,7 +1,15 @@
+import json
 from flask import Flask, render_template, request
 
 app = Flask(__name__)
 
+#### database helper method
+def get_users_data(filename):
+    users_result = dict()
+    with open(filename, 'r') as file:
+        users_result=json.load(file)
+    return users_result
+        
 @app.route('/')
 def root():
     return "this is root page Hello"
@@ -35,7 +43,9 @@ def get_article(id):
     
 @app.route('/users', methods=['GET'])
 def get_users():
-    users = ["user1", "user2", "user3"]
+    # users = ["user1", "user2", "user3"]
+    data = get_users_data("./users.json")
+    users = data["users"]
     return render_template('users.html', users=users)
     
 if __name__ == "__main__":
